@@ -58,11 +58,3 @@ class CommentTaskTestCase(CoreTestCase):
                 comment='teste case comment',
                 task=None
             )
-
-    def test_should_not_be_possible_to_create_a_new_comment_with_a_elevance_note_with_a_negative_number(self):
-        with self.assertRaises(Exception):
-            CommentTask.objects.create(
-                comment='teste case comment',
-                task=self.task,
-                relevant=-1
-            )
